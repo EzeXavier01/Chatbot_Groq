@@ -1,4 +1,3 @@
-flagged/
+__pycache__/
 env/
 chatbot.ipynb
-__pycache__/

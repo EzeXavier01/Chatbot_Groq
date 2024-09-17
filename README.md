@@ -1,4 +1,31 @@
 # Chatbot_Groq
+## Chatbot with FastAPI, Gradio, and SwarmaURI SDK
+
+This project implements a chatbot using FastAPI as the backend, Gradio for the frontend interface, and the SwarmaURI SDK to interact with different models for natural language processing tasks.
+
+## Project Structure
+
+- `main.py`: Contains the core logic, including the setup for the Gradio interface and functions to handle conversation using SwarmaURI's `GroqModel`.
+- `config.py`: Stores configuration settings like the API key, retrieved from environment variables.
+- `run.py`: Runs the FastAPI app and mounts the Gradio interface on the FastAPI route.
+
+## Key Components
+
+### `main.py`
+- **Gradio Interface**: A chat-based interface where users can select a model from a dropdown and provide a system context to converse with.
+- **Model Selection**: Users can dynamically select an available model from SwarmaURI's list of allowed models.
+- **Conversation Handling**: Uses SwarmaURI's `SimpleConversationAgent` to interact with the chosen model and process the conversation history.
+
+### `config.py`
+- **API Key**: Stores the API key required to interact with SwarmaURI models, fetched from environment variables (`GROQ_API_KEY`).
+
+### `run.py`
+- **FastAPI App**: Defines the FastAPI app and mounts the Gradio interface on the `/gradio` route.
+- **Mounting Gradio**: The `gr.mount_gradio_app` method is used to integrate the Gradio interface into FastAPI.
+
+
+
+This project is licensed under the MIT License.
 
 Here’s a breakdown of each import and their typical uses:
 

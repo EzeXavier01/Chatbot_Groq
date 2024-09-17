@@ -1,5 +1,10 @@
-# Import the necessary libraries
-import os
+#!/usr/bin/env python
+# coding: utf-8
+
+
+# # Install SwarmaURI SDK
+# pip install swarmauri[full]==0.4.1
+
 import gradio as gr
 from swarmauri.standard.llms.concrete.GroqModel import GroqModel
 from swarmauri.standard.agents.concrete.SimpleConversationAgent import SimpleConversationAgent
@@ -45,7 +50,7 @@ def converse(input_text, history, system_context, model_name):
     return str(result)
 
 
-# Initial interface code
+# Initial code
 
 # Setting up the Gradio Interface with a dropdown for model selection
 # demo = gr.ChatInterface(
